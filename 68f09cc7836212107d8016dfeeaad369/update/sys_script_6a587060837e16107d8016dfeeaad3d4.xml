@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1583829_it_ass_0_asset_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="x_1583829_it_ass_0_asset_request">u_reference_9.nameSTARTSWITHHelp Desk^ORu_reference_9.nameSTARTSWITHService Desk^u_reference_9VALCHANGES^EQ<item endquery="false" field="u_reference_9.name" goto="false" newquery="false" operator="STARTSWITH" or="false" value="Help Desk"/>
+            <item endquery="false" field="u_reference_9.name" goto="false" newquery="false" operator="STARTSWITH" or="true" value="Service Desk"/>
+            <item endquery="false" field="u_reference_9" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Desks Groups Changes wrt users</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var grps = gs.getUser().getMyGroups();
+	var assGrp = previous.getDisplayValue('u_reference_9');
+	var assGrpValue = previous.getValue('u_reference_9');
+	var newassGrp = current.getDisplayValue('u_reference_9');
+	// gs.addInfoMessage("group="+grps);
+	// gs.addInfoMessage("NEW GRP: "+newassGrp+" OLDE GRP: "+assGrp);
+
+	if(grps.includes(assGrpValue)){
+		assGrpSplt = assGrp.split(" ");
+		newassGrpSplt = newassGrp.split(" ");
+
+		desk = assGrpSplt[0]+assGrpSplt[1];
+		lcn = assGrpSplt[2];
+
+		newDesk = newassGrpSplt[0]+newassGrpSplt[1];
+		newLcn = newassGrpSplt[2];
+		
+
+		if(desk == newDesk || lcn == newLcn){
+			gs.addErrorMessage("Saved!!");
+		}
+		else{
+			current.setAbortAction(true);
+			gs.addErrorMessage("Must be in repective grp!!");
+		}
+	}
+	else{
+		current.setAbortAction(true);
+		//gs.addErrorMessage("OLD DESK: "+desk+" LOCATION: "+lcn+" NEW DESK: "+newDesk+" NEW LOCATION: "+newLcn);
+		gs.addErrorMessage("User ! in grp");
+		gs.addErrorMessage(grps+"    "+assGrpValue);
+	}
+
+})(current, previous);
+
+
+
+
+
+
+// (function executeRule(current, previous /null when async/ ) {
+//     try {
+//         var userGroups = gs.getUser().getMyGroups();
+//         var assignmentGroup = current.getDisplayValue('assignment_group');
+//         var previous_Value = previous.getValue('assignment_group');
+//         var previousValue = previous.getDisplayValue('assignment_group');
+
+//         if (!userGroups.includes(previous_Value)) {
+//             gs.addErrorMessage("You are not authorized to change the assignment group.");
+//             current.setAbortAction(true);
+//             return;
+//         }
+
+//         var splitValue = assignmentGroup.split(' ');
+//         var prevSplitValue = previousValue.split(' ');
+
+//         var newValue = splitValue[0] + splitValue[1];
+//         var place = splitValue[2];
+
+//         var prevValue = prevSplitValue[0] + prevSplitValue[1];
+//         var prevPlace = prevSplitValue[2];
+
+//         if (newValue === prevValue || place === prevPlace) {
+//             gs.addInfoMessage("No significant change in assignment group.");
+//         } else {
+//             gs.addErrorMessage("Assignment group change is not allowed.");
+//             current.setAbortAction(true);
+//         }
+//     } catch (err) {
+//         gs.addErrorMessage("Error occurred: " + err.message);
+//     }
+// })(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-27 12:06:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6a587060837e16107d8016dfeeaad3d4</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>Desks Groups Changes wrt users</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_1583829_it_ass_0">68f09cc7836212107d8016dfeeaad369</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">68f09cc7836212107d8016dfeeaad369</sys_scope>
+        <sys_update_name>sys_script_6a587060837e16107d8016dfeeaad3d4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 07:14:12</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=6a587060837e16107d8016dfeeaad3d4"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>6a587060837e16107d8016dfeeaad3d4</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-27 12:06:51</sys_created_on>
+        <sys_id>c4e881a0837e16107d8016dfeeaad3cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-27 12:06:51</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

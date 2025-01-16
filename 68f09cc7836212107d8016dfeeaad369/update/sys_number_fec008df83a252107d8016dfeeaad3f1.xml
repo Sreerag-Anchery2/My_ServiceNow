@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_1583829_it_ass_0_asset_request">x_1583829_it_ass_0_asset_request</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>AR00XXX</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 09:39:31</sys_created_on>
+        <sys_id>fec008df83a252107d8016dfeeaad3f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>AR00XXX</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_1583829_it_ass_0">68f09cc7836212107d8016dfeeaad369</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">68f09cc7836212107d8016dfeeaad369</sys_scope>
+        <sys_update_name>sys_number_fec008df83a252107d8016dfeeaad3f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-23 09:39:31</sys_updated_on>
+    </sys_number>
+</record_update>

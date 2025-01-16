@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_1583829_it_ass_0.DeskGroupChanges</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>DeskGroupChanges</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var DeskGroupChanges = Class.create();
+DeskGroupChanges.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+	GroupChange: function(){
+		var oldValue = this.getParameter("oldValue");
+		var newValue = this.getParameter("newValue");
+		var grps = gs.getUser().getMyGroups();
+
+		var assGrp = this.getDispVal(oldValue);   //oldValue.getDisplayValue('u_reference_9');
+		var assGrpValue = oldValue;    //this.getDispVal(oldValue).GetValue;   //oldValue.getVal('u_reference_9');
+		var newassGrp = this.getDispVal(newValue);   //newValue.getDisplayValue('u_reference_9');
+
+
+		if(grps.includes(assGrpValue)){
+		assGrpSplt = assGrp.split(" ");
+		newassGrpSplt = newassGrp.split(" ");
+
+		desk = assGrpSplt[0]+assGrpSplt[1];
+		lcn = assGrpSplt[2];
+
+		newDesk = newassGrpSplt[0]+newassGrpSplt[1];
+		newLcn = newassGrpSplt[2];
+		
+
+		if(desk == newDesk || lcn == newLcn){
+			return "true";
+		}
+		else{
+			return "false";
+		}
+	}
+	else{
+		return "false";
+	}
+
+	},
+
+	getDispVal: function (sysid){
+			var gr = new GlideRecord("sys_user_group");
+			gr.addQuery('sys_id',sysid);
+			gr.query();
+			if(gr.next()){
+				var DispValue = gr.getDisplayValue('name');
+
+				// var GetValue = gr.getValue('u_reference_9');
+				// var result = {
+				// 	'DisplayValue' : DispValue,
+				// 	'GetValue' : GetValue,
+				// };
+				
+				return DispValue;
+			}
+		},
+
+    type: 'DeskGroupChanges'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 07:47:31</sys_created_on>
+        <sys_id>d13c9b1d837652107d8016dfeeaad3a6</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>DeskGroupChanges</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_1583829_it_ass_0">68f09cc7836212107d8016dfeeaad369</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IT Asset Management">68f09cc7836212107d8016dfeeaad369</sys_scope>
+        <sys_update_name>sys_script_include_d13c9b1d837652107d8016dfeeaad3a6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 10:28:49</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>d13c9b1d837652107d8016dfeeaad3a6</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-30 07:47:30</sys_created_on>
+        <sys_id>824aabdd83b652107d8016dfeeaad38d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-30 07:47:30</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

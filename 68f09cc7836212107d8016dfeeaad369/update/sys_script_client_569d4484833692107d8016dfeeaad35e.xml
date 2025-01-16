@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_choice_6</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Setting the value of Type of Asset</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+var asset=g_form.getValue('u_choice_6');
+   if (asset == 'computer'){
+	g_form.setValue('u_reference_9','de229b8783ee12107d8016dfeeaad3a4');
+	}
+	else if(asset == 'printer'){
+	g_form.setValue('u_reference_9','63fe1f07832252107d8016dfeeaad3d8');
+	}
+	else if(asset == 'network gear'){
+	g_form.setValue('u_reference_9','2c2e170b836e12107d8016dfeeaad3a0');
+	}
+	else if(asset == 'ups'){
+	g_form.setValue('u_reference_9','2c9f1387832252107d8016dfeeaad3c8');
+	}   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-25 18:37:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>569d4484833692107d8016dfeeaad35e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Setting the value of Type of Asset</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_1583829_it_ass_0">68f09cc7836212107d8016dfeeaad369</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">68f09cc7836212107d8016dfeeaad369</sys_scope>
+        <sys_update_name>sys_script_client_569d4484833692107d8016dfeeaad35e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-26 06:08:17</sys_updated_on>
+        <table>x_1583829_it_ass_0_asset_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description/>
+        <field>u_reference_2</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>If reqstr is vip highlight in red</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   alert(g_scratchpad.requestor);
+   
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 16:04:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fea1aaaf836a12107d8016dfeeaad34e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>If reqstr is vip highlight in red</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_1583829_it_ass_0">68f09cc7836212107d8016dfeeaad369</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">68f09cc7836212107d8016dfeeaad369</sys_scope>
+        <sys_update_name>sys_script_client_fea1aaaf836a12107d8016dfeeaad34e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 16:15:36</sys_updated_on>
+        <table>x_1583829_it_ass_0_asset_request</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="IT Asset Management">68f09cc7836212107d8016dfeeaad369</application>
+        <file_path/>
+        <instance_id>a62078ffdb4ac61437d72a59139619cb</instance_id>
+        <instance_name>dev270584</instance_name>
+        <name>sys_script_client_fea1aaaf836a12107d8016dfeeaad34e</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description/&gt;&lt;field&gt;u_reference_2&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;If reqstr is vip highlight in red&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+   if (isLoading || newValue === '') {
+      return;
+   }
+
+   alert(g_scratchpad.requestor);
+   
+}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2024-12-24 16:04:15&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;fea1aaaf836a12107d8016dfeeaad34e&lt;/sys_id&gt;&lt;sys_mod_count&gt;2&lt;/sys_mod_count&gt;&lt;sys_name&gt;If reqstr is vip highlight in red&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="IT Asset Management" source="x_1583829_it_ass_0"&gt;68f09cc7836212107d8016dfeeaad369&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="IT Asset Management"&gt;68f09cc7836212107d8016dfeeaad369&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_fea1aaaf836a12107d8016dfeeaad34e&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2024-12-24 16:15:36&lt;/sys_updated_on&gt;&lt;table&gt;x_1583829_it_ass_0_asset_request&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-2099689614</payload_hash>
+        <record_name>If reqstr is vip highlight in red</record_name>
+        <reverted_from/>
+        <source>5c3067c7832252107d8016dfeeaad336</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 16:15:36</sys_created_on>
+        <sys_id>1205e26383aa12107d8016dfeeaad3e2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>193f973ccd20000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 16:15:36</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>d605e26395aa121089efd2053fe064e1</update_guid>
+        <update_guid_history>d605e26395aa121089efd2053fe064e1:-2099689614,f8636aef926a121054124173fa6ed1d8:-125454003,d0726aeff16a1210a766b9ebe95cbb00:1970415443</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-24 16:26:43</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>060e073607b04263a0670a990adc8401</sys_id>
+        <sys_metadata>fea1aaaf836a12107d8016dfeeaad34e</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>If reqstr is vip highlight in red</sys_name>
+        <sys_package display_value="IT Asset Management" source="x_1583829_it_ass_0">68f09cc7836212107d8016dfeeaad369</sys_package>
+        <sys_parent display_value="Asset Request">a9a0230b832252107d8016dfeeaad319</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">68f09cc7836212107d8016dfeeaad369</sys_scope>
+        <sys_scope_delete display_value="">385d7c5dbed0458883ad0af575d0ffa4</sys_scope_delete>
+        <sys_update_name>sys_script_client_fea1aaaf836a12107d8016dfeeaad34e</sys_update_name>
+        <sys_update_version display_value="sys_script_client_fea1aaaf836a12107d8016dfeeaad34e">1205e26383aa12107d8016dfeeaad3e2</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-24 16:26:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

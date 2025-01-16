@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Request IT Asset">78f12b4b832252107d8016dfeeaad37b</application>
+        <assessment/>
+        <device_type/>
+        <filter table="x_1583829_it_ass_0_asset_request">u_choice_5!=closed^EQ<item display_value="Closed" endquery="false" field="u_choice_5" goto="false" newquery="false" operator="!=" or="false" value="closed"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>My Open Asset Requests</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_1583829_it_ass_0_asset_request</name>
+        <order>101</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <require_confirmation>true</require_confirmation>
+        <roles/>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-12-23 12:26:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2ce6205f836652107d8016dfeeaad30d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>My Open Asset Requests</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="IT Asset Management" source="x_1583829_it_ass_0">68f09cc7836212107d8016dfeeaad369</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IT Asset Management">68f09cc7836212107d8016dfeeaad369</sys_scope>
+        <sys_update_name>sys_app_module_2ce6205f836652107d8016dfeeaad30d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-12-26 04:49:01</sys_updated_on>
+        <timeline_page/>
+        <title>My Open Asset Requests</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>
